@@ -1,0 +1,42 @@
+<!-- Andrew Perez-Napan -->
+<!-- ap16at -->
+<!-- Due Date: 2-16-21 -->
+<!-- The program in this file is the individual work of Andrew Perez-Napan -->
+
+
+<!-- tables for displaying the top ten restaurants in the SQL table -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Review Application</title>
+</head>
+<body>
+    <h2 style = "text-align: center;">Top Restaurants in Town</h2>
+    <table border = 1 style="margin-left: auto; margin-right: auto;"">
+        <thead>
+           <td style = "text-align: center; font-weight: bold;">Restaurant</td>
+           <td style = "text-align: center; font-weight: bold;">Food</td>
+           <td style = "text-align: center; font-weight: bold;">Service</td>
+           <td style = "text-align: center; font-weight: bold;">Ambience</td>
+           <td style = "text-align: center; font-weight: bold;">Price</td>
+           <td style = "text-align: center; font-weight: bold;">Rating</td>
+        </thead>
+        
+        {% for row in rows %}
+           <tr>
+              <td>{{row["Restaurant"]}}</td>
+              <td>{{row["Food"]}}</td>
+              <td>{{ row["Service"]}}</td>
+              <td>{{row["Ambience"]}}</td>
+              <td>{{row["Price"]}}</td>
+              <td>{{ row["Overall"]}}</td>
+           </tr>
+        {% endfor %}
+     </table>
+
+     <h5 style="text-align: center;"><a href = "/">Back to Home</a></h5>
+</body>
+</html>

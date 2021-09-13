@@ -1,0 +1,32 @@
+<!-- Andrew Perez-Napan -->
+<!-- ap16at -->
+<!-- Due Date: 2-16-21 -->
+<!-- The program in this file is the individual work of Andrew Perez-Napan -->
+
+
+<!-- Form is created here for adding a new review, and the action is set to the index page ... -->
+<!-- so after submission the user will be sent there -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Review Application</title>
+</head>
+<body>
+    <form action = "{{ url_for('index') }}" method = "POST">
+        <h2>Write a Review</h2>
+        Username:<input type = "text" name = "Username" /><br>
+        Restaurant:<input type = "text" name = "Restaurant" /><br>
+        Food:<input type = "text" name = "Food" /><br>
+        Service:<input type = "text" name = "Service" /><br>
+        Ambience:<input type = "text" name = "Ambience" /><br>
+        Price:<input type = "text" name = "Price" /><br>
+        Overall:<input type = "text" name = "Overall" /><br>
+        Review:<br><textarea name = "Review" ></textarea><br>
+        <input type = "submit" value = "submit" /><br><br>
+    </form>
+    <a href = "/">Back to Home</a>
+</body>
+</html>
